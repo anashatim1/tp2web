@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exo09 — Figure, audio et accessibilité</title>
+</head>
+<body>
+  <!-- 4. Lien "Aller au contenu" -->
+  <a href="#main">Aller au contenu</a>
+
+  <header>
+    <h1>Mon mini-site — Exo09</h1>
+    <nav aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a>
+      <a href="#articles">Articles</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+      <h2>Titre illustré</h2>
+      <p>Date : <time datetime="2025-10-23">23 octobre 2025</time></p>
+
+      <!-- 1. Figure + figcaption -->
+      <figure>
+        <img src="images/paysage.jpg" alt="Paysage montagneux au coucher du soleil" width="800" height="450">
+        <figcaption>Vue panoramique : montagnes et lac au coucher du soleil.</figcaption>
+      </figure>
+
+      <p>Un court paragraphe qui décrit l'image ci-dessus et le contexte de l'article.</p>
+
+      <!-- 2. Extrait audio (fichier libre si présent) -->
+      <section aria-labelledby="audio-title">
+        <h3 id="audio-title">Extrait audio</h3>
+        <p>Écoutez un bref extrait audio ci-dessous :</p>
+        <audio controls>
+          <source src="audio/extrait.mp3" type="audio/mpeg">
+          <source src="audio/extrait.ogg" type="audio/ogg">
+          <p>audio non disponible</p>
+        </audio>
+      </section>
+
+      <p><a href="#" role="button">Lire plus</a></p>
+    </article>
+
+    <aside>
+      <h4>À propos</h4>
+      <p>Petit texte à propos du site.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="annee"></span> — Mentions légales</p>
+  </footer>
+</body>
+</html>

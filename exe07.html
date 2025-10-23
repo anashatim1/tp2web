@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire </title>
+</head>
+<body>
+    <h1>Formulaire “Créer un compte”</h1>
+
+    <form action="#">
+        <!-- 🧍 Identité -->
+        <fieldset>
+            <legend>Identité</legend>
+
+            <label for="nom">Nom :</label><br>
+            <input type="text" id="nom" name="nom" required><br><br>
+
+            <label for="prenom">Prénom :</label><br>
+            <input type="text" id="prenom" name="prenom" required><br><br>
+
+            <label for="naissance">Date de naissance :</label><br>
+            <input type="date" id="naissance" name="naissance"
+                   min="1900-01-01" max="" required><br><br>
+        </fieldset>
+
+        <!-- ☎️ Contact -->
+        <fieldset>
+            <legend>Contact</legend>
+
+            <label for="telephone">Téléphone :</label><br>
+            <input type="tel" id="telephone" name="telephone"
+                   pattern="^0[5-7]\d{8}$"
+                   title="Numéro marocain : commence par 05, 06 ou 07 et contient 10 chiffres"
+                   placeholder="Ex : 0612345678" required><br><br>
+
+            <label for="site">Site personnel :</label><br>
+            <input type="url" id="site" name="site" placeholder="https://monsite.com"><br><br>
+        </fieldset>
+
+        <!-- 🔒 Sécurité -->
+        <fieldset>
+            <legend>Sécurité</legend>
+
+            <label for="mdp">Mot de passe :</label><br>
+            <input type="password" id="mdp" name="mdp" minlength="8" required><br><br>
+
+            <label for="confirm">Confirmer le mot de passe :</label><br>
+            <input type="password" id="confirm" name="confirm" minlength="8" required><br><br>
+        </fieldset>
+
+        <!-- ⚙️ Préférences -->
+        <fieldset>
+            <legend>Préférences</legend>
+
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">S’abonner à la newsletter</label><br><br>
+
+            <span>Rôle :</span><br>
+            <input type="radio" id="etudiant" name="role" value="etudiant" required>
+            <label for="etudiant">Étudiant</label><br>
+
+            <input type="radio" id="pro" name="role" value="pro">
+            <label for="pro">Professionnel</label><br><br>
+        </fieldset>
+
+        <!-- Bouton -->
+        <fieldset>
+            <legend>Validation</legend>
+            <button type="submit">Créer mon compte</button>
+        </fieldset>
+    </form>
+
+
+</body>
+</html>
